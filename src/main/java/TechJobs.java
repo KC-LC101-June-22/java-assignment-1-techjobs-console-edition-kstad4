@@ -125,12 +125,15 @@ public class TechJobs {
 
 // [{},{},{}...]
         for (HashMap<String, String> singleJob : someJobs) {
+            System.out.println();
             System.out.println("*****");
 
             for (Map.Entry<String, String> jobDetail : singleJob.entrySet()) {
                 System.out.println(jobDetail.getKey() + ": " + jobDetail.getValue());
             }
-            System.out.println("*****\n");
+            System.out.println("*****");
+            System.out.println();
+
         }
 
 
