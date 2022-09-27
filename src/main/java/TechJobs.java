@@ -119,7 +119,32 @@ public class TechJobs {
 
     // Print a list of jobs
     private static void printJobs(ArrayList<HashMap<String, String>> someJobs) {
+        if (someJobs.isEmpty()) {
+            System.out.print("No Results");
+        } else {
 
-        System.out.println("printJobs is not implemented yet");
+            for (HashMap<String, String> singleJob : someJobs) {
+                System.out.println();
+                System.out.println("*****");
+
+                for (Map.Entry<String, String> jobDetail : singleJob.entrySet()) {
+                    System.out.println(jobDetail.getKey() + ": " + jobDetail.getValue());
+                }
+                System.out.println("*****");
+
+            }
+        }
+
+
+/**Original data order on job_data.csv:
+name,employer,location,position type,core competency
+**/
+
+
+/**New order when calling Jobdata.findall()
+{position type=Data Scientist / Business Intelligence, name=Junior Data Analyst, employer=Lockerdome, location=Saint Louis, core competency=Statistical Analysis}
+*/
+
+//            System.out.println(someJobs);
     }
 }
